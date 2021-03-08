@@ -1,157 +1,194 @@
-<html lang="en" class="">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Arink Verma's Index</title>
-    <link rel="canonical" href="https://arink.dev/">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,900">
     <style type="text/css">
-      #contaianer {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background-color: #FFFFFF;
-        overflow: hidden;
-        font-family: sans-serif;
+      .parallax {
+      margin: 0;
+      color: white;
+      height: 95vmin;
+      width: 95vmin;
+      max-height: 600px;
+      max-width: 600px;
+      overflow: hidden;
+      z-index: 10;
+      position: relative;
       }
-      #wrapper {
-        overflow: hidden;
-        position: absolute;
-        width: 1500px;
-        height: 800px;
-        z-index: 10;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+      .parallax div {
+      background-position: center center;
+      background-size: cover;
       }
-      #wrapper div {
-        position: absolute;
-        background-position: center center;
-        background-size: cover;
+      .backdrop {
+      width: 130%;
+      height: 130%;
+      z-index: 6;
+      background-image: url('//raw.githubusercontent.com/arinkverma/arinkverma.github.io/master/backdrop.jpg');
+      margin-left: -10%;
+      margin-top: -2%;
       }
-      .p1 {
-        width: 1776px;
-        height: 1183px;
-        z-index: 6;
-        background-image: url('//raw.githubusercontent.com/arinkverma/arinkverma.github.io/master/1.jpg');
-        left: -89px;
-        top: -0px;
+      .arink {
+      width: 100%;
+      height: 100%;
+      z-index: 8;
+      background-image: url('//raw.githubusercontent.com/arinkverma/arinkverma.github.io/master/arink.png');
+      margin-top: -104%;
+      margin-left: -50%;
       }
-      .p2 {
-        width: 927px;
-        height: 1000px;
-        z-index: 8;
-        background-image: url('//raw.githubusercontent.com/arinkverma/arinkverma.github.io/master/2.png');
-        left: -160px;
-        top: 250px;
+      .cliff {
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background-image: url('//raw.githubusercontent.com/arinkverma/arinkverma.github.io/master/right-cliff.png');
+      margin-left: 20%;
+      margin-top: -100%;
       }
-      .p3 {
-        width: 1082px;
-        height: 729px;
-        z-index: 10;
-        background-image: url('//raw.githubusercontent.com/arinkverma/arinkverma.github.io/master/3.png');
-        left: 718px;
-        top: 140px;
+      .rowvh{
+      margin-top: 50px;
       }
-      .quote {
-        font-family: 'Roboto', serif;
-        font-weight: 200;
-        color: #FFF;
-        font-size: 4em;
-        top: 20%;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        z-index: 7;
-        text-shadow: 1px 1px #000;
+      .colvw{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       }
-      .description{
-        font-family: 'Roboto', serif;
-        margin: 0;
-        z-index: 11;
-        color: #000;
-        top: 65%;
-        width: 100%;
-        float: left;
+      .about{
+        margin: 50px;
       }
-      .links{
-        position: relative;
-        margin-bottom: 20px; 
-        padding: 10px 0 10px 0;
-        background: rgba(255, 255, 255, 0.8);
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 2em;
+      .social{
+        margin-top: 50px;
       }
-
-      .intro{
-        position: relative;
-        margin-top: 100px;
-        margin-bottom: 20px; 
-        padding: 10px 0 10px 0;
-        background: rgba(255, 255, 255, 0.8);
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 1.2em;
+      .news{
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 150px;
       }
-
-      a {
-        text-decoration-color: #000;
-        text-decoration-thickness: .1em;
-        text-underline-offset: 4px;
-      }
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: #EA215A 0.1em dotted;
+}
+footer{
+  margin-top:0 !important;
+}
     </style>
   </head>
-  <body data-new-gr-c-s-check-loaded="14.997.0" data-gr-ext-installed="">
-    <div id="contaianer">
-      <section id="wrapper">
-        <div class="p1" data-speed="0.01" data-revert="true" style="transform: matrix(1, 0, 0, 1, -0.98, 0.655);"></div>
-        <div class="p2" data-speed="0.02" style="transform: matrix(1, 0, 0, 1, 4.96, 1.69);"></div>
-        <div class="p3" data-speed="0.01" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);"></div>
-        <div class="quote" data-speed="0" style="transform: matrix(1, 0, 0, 1, 1, 1);">Lukewarm is <br/>
-          No Good.
+  <body>
+    <div class="container">
+    <div class="row rowvh align-items-center">
+    <div>
+      <h3>
+        //Arink
+        <small class="text-muted">.Dev</small>
+      </h3>
+      <div class="row align-items-center justify-content-center">
+        <div class="colvw col-md">
+          <div class="parallax">
+            <div class="backdrop" data-speed="0.01" data-revert="true" style="transform: matrix(1, 0, 0, 1, -0.98, 0.655);"></div>
+            <div class="arink" data-speed="0.02" style="transform: matrix(1, 0, 0, 1, 4.96, 1.69);"></div>
+            <div class="cliff" data-speed="0.01" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);"></div>
+          </div>
         </div>
-        <div class="description" data-speed="0" style="transform: matrix(1, 0, 0, 1, 1, 1);">
-          <div class="links">
-          <a target="_blank" href="https://arinkverma.medium.com/">Medium</a> | 
-          <a target="_blank" href="https://www.linkedin.com/in/arinkverma/">LinkedIn</a>
+        <div class="colvw col-md">
+          <div class="about">
+            <h2 class="display-6">
+              Namaste!
+            </h2>
+            <h5>I am on a voyage of learning and exploration to solve people's problems with scalable tech.
+            <br/><br/>
+The journey has given me opportunities to meet fascinating people and built stellar products and companies.
+            <br/><br/>
+              <ul>
+              <li>ex GreedyGame - <small class="text-muted">Co-founder</small></li>
+              <li>ex Grupee - <small class="text-muted">Co-founder</small></li>
+              <li>ex Dentistry - <small class="text-muted">CTO</small></li>
+              <li>ex Rippling - <small class="text-muted">Sr. Engineer</small></li>
+            </ul><ul>
+              <li>GSOC'2012 & 2013 - <small class="text-muted">Contributor Python Software Foundation</small></li>
+            </ul>
+            </h5>
+
+            <div class="row social">
+              <div class="col-md-12">
+                <h4 class="display-6">Always up for a catch-up.</h4>
+              </div>
+              <div class="col-md-12">
+                <h5><span class="icon"><svg 
+                  style="position:relative; margin-right:10px;top:-4px; left:0; z-index:-1;"
+                  height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/></svg>  <a href="https://www.linkedin.com/in/arinkverma/" target="_blank">/in/arinkverma</a></span></h5>
+              </div>
+              <div class="col-md-12">
+                <h5><svg style="position:relative; margin-right:10px;top:0px; left:0; z-index:-1;" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m7.996 21.324c0 .695-.521.982-1.098.695l-6.228-3.113c-.188-.089-.346-.238-.475-.447s-.195-.417-.195-.622v-15.227c0-.568.341-.825 1.112-.441l6.844 3.42c.099.099.026-.581.04 15.735zm.857-14.32 7.152 11.568-7.152-3.553zm15.147.241v14.079c0 .223-.062.403-.188.541-.125.138-.295.207-.509.207s-.424-.058-.629-.174l-5.906-2.939zm-.04-1.603c0 .027-1.145 1.895-3.435 5.603s-3.632 5.88-4.025 6.512l-5.223-8.469 4.339-7.039c.236-.388.72-.456 1.045-.294l7.246 3.607c.035.017.053.044.053.08z"/></svg>  <a href="https://arinkverma.medium.com/" target="_blank">arinkverma.medium.com</a></h5>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="intro">
-          Welcome to Arink Verma's page.
-        </div>
-        </div>
-      </section>
+      </div>
+      <div class="row news">
+      <div class="col-md-12">
+        <h4 class="display-6">News about me.</h4>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote">
+  <p class="mb-0">CTO of the year 2016 By
+<a href="http://bit.ly/2KbOBgd">Dell-EMC</a> from 200 participants.</p>
+  <footer class="blockquote-footer">Dell-EMC <cite title="Source Title">2016</cite></footer>
+</blockquote>
+      </div>
+            <div class="col-md-6">
+        <blockquote class="blockquote">
+  <p class="mb-0">Featured in GCP case study by
+<a href="http://bit.ly/arink-gcp-study">Google</a>.</p>
+  <footer class="blockquote-footer">Google Cloud Platform <cite title="Source Title">2019</cite></footer>
+</blockquote>
+      </div>
+            <div class="col-md-6">
+        <blockquote class="blockquote">
+  <p class="mb-0"><a href="http://bit.ly/2wOubRw">BlackBox</a> Connect represented
+India in amongst 13 Countries.</p>
+  <footer class="blockquote-footer">Economic Times <cite title="Source Title">2015</cite></footer>
+</blockquote>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote">
+  <p class="mb-0"><a href="http://bit.ly/red-tape-1">Arink's app</a> helps cut red tape.</p>
+  <footer class="blockquote-footer">The Times of India <cite title="Source Title">2013</cite></footer>
+</blockquote>
+      </div>
     </div>
+    </div>
+  </div>
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
     <script type="text/javascript">
       $('html').mousemove(function(e){
-      	
-      	var wx = $(window).width();
-      	var wy = $(window).height();
-      	
-      	var x = e.pageX - this.offsetLeft;
-      	var y = e.pageY - this.offsetTop;
-      	
-      	var newx = x - wx/2;
-      	var newy = y - wy/2;
-      	
-      	$('span').text(newx + ", " + newy);
-      	
-      	$('#wrapper div').each(function(){
-      		var speed = $(this).attr('data-speed');
-      		if($(this).attr('data-revert')) speed *= -1;
-      		TweenMax.to($(this), 1, {x: (1 - newx*speed), y: (1 - newy*speed)});
-      		
-      	});
-      	
+        
+        var wx = $(window).width();
+        var wy = $(window).height();
+        
+        var x = e.pageX - this.offsetLeft;
+        var y = e.pageY - this.offsetTop;
+        
+        var newx = x - wx/2;
+        var newy = y - wy/2;
+        
+        //$('span').text(newx + ", " + newy);
+        
+        $('.parallax div').each(function(){
+          var speed = $(this).attr('data-speed');
+          if($(this).attr('data-revert')) speed *= -1;
+          TweenMax.to($(this), 1, {x: (1 - newx*speed), y: (1 - newy*speed)});
+          
+        });
+        
       });
     </script>
   </body>

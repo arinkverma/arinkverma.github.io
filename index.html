@@ -224,7 +224,19 @@
       //   moveParallax(newx, newy);   
       // });
 
+      function setSize(){
+        var width = $('.colvw').width();
+        var height = $('.colvw').height();
+        $('.parallax').width(Math.min(width, height));
+        $('.parallax').height(Math.min(width, height));
+      }
+
+      $(window).on('resize', function(){
+          setSize();
+      });
+
       $( document ).ready(function() {
+        setSize();
         autoStart();
       });
     </script>

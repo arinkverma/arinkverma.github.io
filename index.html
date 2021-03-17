@@ -75,31 +75,14 @@
         margin-left: -5%;
         margin-top: -125%;
       }
-      .rowvh{
-        margin-top: 50px;
-      }
-      .colvw{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .about{
-        margin: 20px 10px 20px 10px;
-      }
       .social{
         margin-top: 50px;
       }
-      .news{
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-      }
-      .medium {
-        margin-top: 20px;
-        margin-bottom: 50px;
-        margin-left: 10px;
-        margin-right: 10px;
+      .post{
+        background-color: #F5F5F5;
+        margin: 5px;
+        padding: 15px;
+        border-radius: 5px;
       }
       .medium img{
         height: 150px;
@@ -132,14 +115,15 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row rowvh align-items-center">
+    <div class="container mt-5">
+      <div class="row align-items-center">
         <h3>
           Arink Verma
           <small class="text-muted"><i>~ Lukewarm is no good.</i></small>
+
         </h3>
         <div class="row align-items-center justify-content-center">
-          <div class="colvw col-md">
+          <div class="col-md-6">
             <div class="parallax">
               <div class="backdrop" data-speed="0.01" data-revert="true" style="transform: matrix(1, 0, 0, 1, -0.98, 0.655);"></div>
               <div class="arink" data-speed="0.02" style="transform: matrix(1, 0, 0, 1, 4.96, 1.69);"></div>
@@ -147,8 +131,8 @@
               <div class="clouds" data-speed="0.01" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);"></div>
             </div>
           </div>
-          <div class="colvw col-md">
-            <div class="row about">
+          <div class="col-md-6">
+            <div class="row">
               <div class="col-md-12">
                 <h4 class="display-6">Namaste!</h4>
                 <p>
@@ -184,31 +168,44 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row news">
+
+
+          <div class="col-md-12 mt-5">
+                 <div class="row">
           <div class="col-md-12">
             <h4 class="display-6">Featured in News.</h4>
           </div>
           <div class="col-md-6">
+            <a href="http://bit.ly/2KbOBgd"><div class="post">
             <p class="mb-0">CTO of the year 2016 By
-            <a href="http://bit.ly/2KbOBgd">Dell-EMC</a> from 200 participants.</p>
+            Dell-EMC from 200 participants.</p>
             <footer class="blockquote-footer">Dell-EMC <cite title="Source Title">2016</cite></footer>
+          </div></a>
           </div>
           <div class="col-md-6">
+            <a href="http://bit.ly/arink-gcp-study"><div class="post">
             <p class="mb-0">Featured in GCP case study by
-            <a href="http://bit.ly/arink-gcp-study">Google</a>.</p>
+            Google.</p>
             <footer class="blockquote-footer">Google Cloud Platform <cite title="Source Title">2019</cite></footer>
+          </div></a>
           </div>
           <div class="col-md-6">
-            <p class="mb-0"><a href="http://bit.ly/2wOubRw">BlackBox</a> Connect represented
+            <a href="http://bit.ly/2wOubRw"><div class="post">
+            <p class="mb-0">BlackBox< Connect represented
             India in amongst 13 Countries.</p>
             <footer class="blockquote-footer">Economic Times <cite title="Source Title">2015</cite></footer>
+          </div></a>
           </div>
           <div class="col-md-6">
-            <p class="mb-0"><a href="http://bit.ly/red-tape-1">Arink's app</a> helps cut red tape.</p>
+            <a href="http://bit.ly/red-tape-1"><div class="post">
+            <p class="mb-0">Arink's app helps cut red tape.</p>
             <footer class="blockquote-footer">The Times of India <cite title="Source Title">2013</cite></footer>
+          </div></a>
           </div>
         </div>
+          </div>
+        
+        <div class="col-md-12 mt-5">
         <div class="row medium">
           <div class="col-md-12">
             <h4 class="display-6">Recent Posts.</h4>
@@ -216,8 +213,11 @@
         </div>
       </div>
 
+        </div>
+      </div>
 
-      <div class="row">
+
+      <div class="row mt-5">
         <div class="col-md-12">
           <footer>Hosted on Github Pages with ❤️ from 🇮🇳.</footer>
           <br/><br/>
@@ -259,12 +259,12 @@
         var rss = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arinkverma";
         $.get( rss, function( data ) {
           data.items.slice(0, 4).forEach(function(item){
-            var pubDate = new Date(item.pubDate);
+            var pubDate = new Date(item.pubDate.split(" ")[0]);
             var post = '<div class="col-md-6">'+
-            '<a target="_blank" href="'+item.link+'"><p class="mb-0">'+item.title+'</p>'+
+            '<a target="_blank" href="'+item.link+'"><div class="post"><p class="mb-0">'+item.title+'</p>'+
             '<img src="'+item.thumbnail+'" class="rounded img-fluid"/>'+
             
-            '<footer class="blockquote-footer">'+moment(pubDate).format('ll')+' by '+item.author+'</footer></a>'+
+            '<footer class="blockquote-footer">'+moment(pubDate).format('ll')+' by '+item.author+'</footer></div></a>'+
         '</div>';
             $(".medium").append(post);
           });
@@ -272,25 +272,24 @@
       }
 
 
-      // $('html').mousemove(function(e){
+      $('html').mousemove(function(e){
         
-      //   var wx = $(window).width();
-      //   var wy = $(window).height();
+        var wx = $(window).width();
+        var wy = $(window).height();
         
-      //   var x = e.pageX - this.offsetLeft;
-      //   var y = e.pageY - this.offsetTop;
+        var x = e.pageX - this.offsetLeft;
+        var y = e.pageY - this.offsetTop;
         
-      //   var newx = x - wx/2;
-      //   var newy = y - wy/2;
+        var newx = x - wx/2;
+        var newy = y - wy/2;
         
-      //   moveParallax(newx, newy);   
-      // });
+        moveParallax(newx, newy);   
+      });
 
       function setSize(){
-        var width = $('.colvw').width();
-        var height = $('.colvw').height();
-        $('.parallax').width(Math.min(width, height));
-        $('.parallax').height(Math.min(width, height));
+        var side = $('.parallax').parent().width() - 40;
+        $('.parallax').width(side);
+        $('.parallax').height(side);
       }
 
       $(window).on('resize', function(){
@@ -302,6 +301,16 @@
         autoStart();
         fetchMediumPost();
       });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0NKXG4Z4W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T0NKXG4Z4W');
     </script>
   </body>
 </html>

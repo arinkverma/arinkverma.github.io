@@ -26,10 +26,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <style type="text/css">
   .parallax {
-    margin: 0;
+/*    margin: 0;*/
     color: white;
-    height: 95vmin;
-    width: 95vmin;
     max-height: 600px;
     max-width: 600px;
     overflow: hidden;
@@ -136,18 +134,15 @@
 
 <body>
   <div class="container mt-5">
-    <div class="row align-items-center">
-      <h3>
-          ArinkVerma<span class="text-muted">.in</span>
-        </h3>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-6">
+    <div class="row d-flex justify-content-center">
+      <h3>ArinkVerma<span class="text-muted">.in</span></h3>
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center">
           <div class="parallax">
             <div class="backdrop" data-speed="0.01" data-revert="true" style="transform: matrix(1, 0, 0, 1, -0.98, 0.655);"></div>
-            <div class="quote" data-speed="0" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);">
-              <h3>
-                    <center>Lukewarm is <br/>no good.</center>
-                  </h3> </div>
+            <div class="quote text-center" data-speed="0" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);">
+              <h3>Lukewarm is <br/>no good.</h3>
+            </div>
             <div class="arink" data-speed="0.02" style="transform: matrix(1, 0, 0, 1, 4.96, 1.69);"></div>
             <div class="cliff" data-speed="0.01" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);"></div>
             <div class="clouds" data-speed="0.01" style="transform: matrix(1, 0, 0, 1, 2.98, 1.345);"></div>
@@ -167,8 +162,6 @@
                   <li>Grupee - <small class="text-muted">Co-founder</small></li>
                   <li>Dentistry - <small class="text-muted">CTO</small></li>
                   <li>Rippling - <small class="text-muted">Sr. Engineer</small></li>
-                </ul>
-                <ul>
                   <li>GSOC'2012 & 2013 - <small class="text-muted">Contributor Python Software Foundation</small></li>
                 </ul>
               </p>
@@ -195,32 +188,32 @@
               <h4 class="display-6">Featured in News.</h4> </div>
             <div class="col-md-6">
               <a href="http://bit.ly/2KbOBgd">
-                <div class="post">
-                  <p class="mb-0">CTO of the year 2016 By Dell-EMC from 200 participants.</p>
+                <div class="post text-center">
+                  <p class="mb-0 mt-2">CTO of the year 2016 By Dell-EMC from 200 participants.</p>
                   <footer class="blockquote-footer">Dell-EMC <cite title="Source Title">2016</cite></footer>
                 </div>
               </a>
             </div>
             <div class="col-md-6">
               <a href="http://bit.ly/arink-gcp-study">
-                <div class="post">
-                  <p class="mb-0">Featured in GCP case study by Google.</p>
+                <div class="post text-center">
+                  <p class="mb-0 mt-2">Featured in GCP case study by Google.</p>
                   <footer class="blockquote-footer">Google Cloud Platform <cite title="Source Title">2019</cite></footer>
                 </div>
               </a>
             </div>
             <div class="col-md-6">
               <a href="http://bit.ly/2wOubRw">
-                <div class="post">
-                  <p class="mb-0">BlackBox Connect represented India in amongst 13 Countries.</p>
+                <div class="post text-center">
+                  <p class="mb-0 mt-2">BlackBox Connect represented India in amongst 13 Countries.</p>
                   <footer class="blockquote-footer">Economic Times <cite title="Source Title">2015</cite></footer>
                 </div>
               </a>
             </div>
             <div class="col-md-6">
               <a href="http://bit.ly/red-tape-1">
-                <div class="post">
-                  <p class="mb-0">Arink's app helps cut red tape.</p>
+                <div class="post text-center">
+                  <p class="mb-0 mt-2">Arink's app helps cut red tape.</p>
                   <footer class="blockquote-footer">The Times of India <cite title="Source Title">2013</cite></footer>
                 </div>
               </a>
@@ -279,7 +272,7 @@
     $.get(rss, function(data) {
       data.items.slice(0, 4).forEach(function(item) {
         var pubDate = new Date(item.pubDate.split(" ")[0]);
-        var post = '<div class="col-md-6">' + '<a target="_blank" href="' + item.link + '"><div class="post"><p class="mb-0">' + item.title + '</p>' + '<img src="' + item.thumbnail + '" class="rounded img-fluid"/>' + '<footer class="blockquote-footer">' + moment(pubDate).format('ll') + ' by ' + item.author + '</footer></div></a>' + '</div>';
+        var post = '<div class="col-md-6">' + '<a target="_blank" href="' + item.link + '"><div class="post text-center"><p class="mb-0  mt-2">' + item.title + '</p>' + '<img src="' + item.thumbnail + '" class="rounded img-fluid"/>' + '<footer class="blockquote-footer">' + moment(pubDate).format('ll') + ' by ' + item.author + '</footer></div></a>' + '</div>';
         $(".medium").append(post);
       });
     });

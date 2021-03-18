@@ -25,108 +25,106 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <style type="text/css">
-  .parallax {
-    margin: 0;
-    color: white;
-    max-height: 600px;
-    max-width: 600px;
-    overflow: hidden;
-    z-index: 10;
-    position: relative;
-    border-radius: 6px;
-    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 2px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .parallax div {
-    background-position: center center;
-    background-size: cover;
-  }
-  
-  .parallax .backdrop {
-    width: 130%;
-    height: 130%;
-    z-index: 6;
-    background-image: url('/images/backdrop.jpg');
-    margin-left: -10%;
-    margin-top: -2%;
-  }
-  
-  .parallax .arink {
-    width: 100%;
-    height: 100%;
-    z-index: 8;
-    background-image: url('/images/arink.png');
-    margin-top: -150%;
-    margin-left: -50%;
-  }
-  
-  .parallax .cliff {
-    width: 100%;
-    height: 80%;
-    z-index: 10;
-    background-image: url('/images/right-cliff.png');
-    margin-left: 20%;
-    margin-top: -80%;
-  }
-  
-  .parallax .clouds {
-    width: 120%;
-    height: 120%;
-    z-index: 11;
-    background-image: url('/images/clouds.png');
-    margin-left: -5%;
-    margin-top: -125%;
-  }
-  
-  .parallax .quote {
-    width: 100%;
-    height: 100%;
-    z-index: 7;
-    margin-top: -50%;
-    font-color: white;
-  }
-  
-  .post {
-    background-color: #F5F5F5;
-    margin: 5px;
-    padding: 15px;
-    border-radius: 5px;
-  }
-  
-  .medium img {
-    height: 150px;
-    width: auto;
-    margin: 10px;
-  }
-  
-  .medium a {
-    text-decoration: none;
-    border-bottom: none;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
-  
-  li {
-    font-size: 1.2em;
-  }
-  
-  h4 {
-    color: #080808;
-    margin-top: 10px !important;
-    margin-bottom: 20px !important;
-  }
-  
-  a {
-    color: #000;
-    text-decoration: none;
-    border-bottom: #EA215A 0.1em dotted;
-  }
-  
-  footer {
-    margin-top: 0 !important;
-  }
+    #parallax {
+      margin: 0;
+      color: white;
+      overflow: hidden;
+      z-index: 10;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 2px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #parallax div {
+      background-position: center center;
+      background-size: cover;
+    }
+    
+    #parallax .backdrop {
+      width: 130%;
+      height: 130%;
+      z-index: 6;
+      background-image: url('/images/backdrop.jpg');
+      margin-left: -10%;
+      margin-top: -2%;
+    }
+    
+    #parallax .arink {
+      width: 100%;
+      height: 100%;
+      z-index: 8;
+      background-image: url('/images/arink.png');
+      margin-top: -150%;
+      margin-left: -50%;
+    }
+    
+    #parallax .cliff {
+      width: 100%;
+      height: 80%;
+      z-index: 10;
+      background-image: url('/images/right-cliff.png');
+      margin-left: 20%;
+      margin-top: -80%;
+    }
+    
+    #parallax .clouds {
+      width: 120%;
+      height: 120%;
+      z-index: 11;
+      background-image: url('/images/clouds.png');
+      margin-left: -5%;
+      margin-top: -125%;
+    }
+    
+    #parallax .quote {
+      width: 100%;
+      height: 100%;
+      z-index: 7;
+      margin-top: -50%;
+      font-color: white;
+    }
+    
+    .post {
+      background-color: #F5F5F5;
+      margin: 5px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    
+    .medium img {
+      height: 150px;
+      width: auto;
+      margin: 10px;
+    }
+    
+    .medium a {
+      text-decoration: none;
+      border-bottom: none;
+    }
+    
+    p {
+      font-size: 1.2em;
+    }
+    
+    li {
+      font-size: 1.2em;
+    }
+    
+    h4 {
+      color: #080808;
+      margin-top: 10px !important;
+      margin-bottom: 20px !important;
+    }
+    
+    a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: #EA215A 0.1em dotted;
+    }
+    
+    footer {
+      margin-top: 0 !important;
+    }
   </style>
 </head>
 
@@ -244,7 +242,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script type="text/javascript">
   function moveParallax(newx, newy) {
-    $('.parallax div').each(function() {
+    $('#parallax div').each(function() {
       var speed = $(this).attr('data-speed');
       if($(this).attr('data-revert')) speed *= -1;
       TweenMax.to($(this), 1, {
@@ -289,9 +287,9 @@
   });
 
   function setSize() {
-    var side = $('.parallax').parent().width();
-    $('.parallax').width(side);
-    $('.parallax').height(side);
+    var side = $('#parallax').parent().width();
+    $('#parallax').width(side);
+    $('#parallax').height(side);
   }
   $(window).on('resize', function() {
     setSize();
